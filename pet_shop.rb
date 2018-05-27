@@ -69,5 +69,75 @@ end
 
 # 12
 
+def remove_pet_by_name(pet_shop, pet_name_to_delete)
+  for actual_pet in pet_shop[:pets]
+    if actual_pet[:name] == pet_name_to_delete
+      pet_shop[:pets].delete(actual_pet)
+    end
+  end
+end
 
 # 13
+
+def add_pet_to_stock(pet_shop, new_pet)
+  pet_shop[:pets].push(new_pet)
+end
+
+# def add_pet_to_stock(pet_shop, new_pet)
+#   pet_shop[:pets] << new_pet
+# end
+
+# 14
+
+def customer_cash(customer)
+  return customer[:cash]
+end
+
+# 15
+
+def remove_customer_cash(customer, amount)
+  return customer[:cash] -= amount
+end
+
+# 16
+
+def customer_pet_count(customers)
+  return customers[:pets].count()
+end
+
+# 17
+
+def add_pet_to_customer(customer, new_pet)
+  customer[:pets] << new_pet
+end
+
+# 18 & 19
+
+def customer_can_afford_pet(customer, new_pet)
+  if customer[:cash] >= new_pet[:price]
+    return true
+  else
+    return false
+  end
+end
+
+# 20
+
+def find_pet_by_name(pet_shop, customer)
+
+
+  customer[:pets] << new_pet
+end
+
+
+
+
+
+
+def find_pet_by_name(pet_shop, pet_name)
+  pets = pet_shop[:pets]
+  for pet in pets
+    return pet if pet[:name] == pet_name
+  end
+  return nil
+end
